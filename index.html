@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CraftMyResume</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>CraftMyResume</h1>
+    <label class="theme-toggle">
+      <input type="checkbox" id="theme-switch" />
+      <span>🌙</span>
+    </label>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Build Your Resume</h2>
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Full Name" />
+        <input type="email" id="email" placeholder="Email" />
+        <input type="text" id="phone" placeholder="Phone" />
+      </div>
+
+      <textarea id="summary" placeholder="Professional Summary"></textarea>
+      <textarea id="skills" placeholder="Skills (comma separated)"></textarea>
+      <textarea id="education" placeholder="Education Details"></textarea>
+      <textarea id="experience" placeholder="Work Experience"></textarea>
+
+      <div id="custom-sections"></div>
+      <button onclick="addCustomSection()">Add Custom Section</button>
+
+      <select id="template-select">
+        <option value="classic">Classic</option>
+        <option value="modern">Modern</option>
+        <option value="minimal">Minimal</option>
+      </select>
+
+      <div class="buttons">
+        <button onclick="generateResume()">Generate Resume</button>
+        <button onclick="downloadPDF()">Download .txt</button>
+      </div>
+    </section>
+
+    <section class="preview-section">
+      <h2>Resume Preview</h2>
+      <div id="resume-preview" class="resume-output"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Crafted with ❤️ for Hackathons</p>
+  </footer>
+
+  <script type="module" src="enter.js"></script>
+</body>
+</html>
+

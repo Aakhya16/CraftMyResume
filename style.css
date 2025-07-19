@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+  padding: 2rem;
+}
+
+.dark-mode {
+  background: #121212;
+  color: #f0f0f0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 1rem;
+  animation: fadeInDown 0.5s ease-in-out;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #3b82f6;
+}
+
+.theme-toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.form-section,
+.preview-section {
+  flex: 1 1 45%;
+}
+
+.form-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 5px #3b82f6;
+}
+
+button {
+  background: #3b82f6;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+.resume-output {
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px solid #ccc;
+  background: white;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Resume Templates */
+.resume.classic {
+  font-family: 'Georgia', serif;
+  background: #fffefc;
+  color: #000;
+}
+
+.resume.modern {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #f8fafc, #e2e8f0);
+  color: #1f2937;
+  border-left: 5px solid #3b82f6;
+  padding-left: 1.5rem;
+}
+
+.resume.minimal {
+  font-family: 'Courier New', monospace;
+  background: #f9f9f9;
+  color: #333;
+  border: 1px dashed #aaa;
+  padding: 1.5rem;
+}
+
+/* Custom Sections */
+.custom-section {
+  margin-bottom: 1rem;
+  border-left: 3px solid #3b82f6;
+  padding-left: 1rem;
+}
+
+
+
+
+
+
+
